@@ -2,8 +2,8 @@
   "name": "Ain Jeong's App",
   "short_name": "Ain Jeong's App",
   "description": "Github Page for Ain Jeong's App",
-  "scope": "/ICS2O-PWA-Test/",
-  "start_url": "/ICS2O-PWA-Test/",
+  "scope": "/ICD2O-Unit-6-01-Ain-Jeong/",
+  "start_url": "/ICD2O-Unit-6-01-Ain-Jeong/",
   "permissions": [ 
     "unlimitedStorage",
     "fullscreen"
