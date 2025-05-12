@@ -30,8 +30,8 @@ function doMultiplication () {
 
   // process
   while (counter < secondNumber) {
-    counter = counter + 1
-    answer = answer + firstNumber
+    counter ++
+    answer += firstNumber
   }
 
   // output
