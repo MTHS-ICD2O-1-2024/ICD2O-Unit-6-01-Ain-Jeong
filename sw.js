@@ -47,7 +47,7 @@ self.addEventListener('activate', function (e) {
             console.log('Deleting cache : ' + keyList[i])
             return caches.delete(keyList[i])
           }
-          return Promise.resolve();
+          return Promise.resolve()
         })
       )
     })
