@@ -11,7 +11,7 @@
  */
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('/ICD2O-Unit-6-01-Ain-Jeong/sw.js', {
-    scope: '/ICD2O-Unit-6-01-Ain-Jeong/',
+    scope: '/ICD2O-Unit-6-01-Ain-Jeong/'
   })
 }
 
@@ -30,7 +30,7 @@ function doMultiplication () {
 
   // process
   while (counter < secondNumber) {
-    counter ++
+    counter++
     answer += firstNumber
   }
 

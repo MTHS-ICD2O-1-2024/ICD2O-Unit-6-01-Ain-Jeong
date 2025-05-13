@@ -1,15 +1,15 @@
-var GHPATH = '/github-page-pwa'
-var APP_PREFIX = 'gppwa_'
-var VERSION = 'version_001'
-var URLS = [
+const GHPATH = '/github-page-pwa'
+const APP_PREFIX = 'gppwa_'
+const VERSION = 'version_001'
+const URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
   `${GHPATH}/css/styles.css`,
   `${GHPATH}/android-chrome-512x512.png`,
-  `${GHPATH}/js/script.js`,
+  `${GHPATH}/js/script.js`
 ]
 
-var CACHE_NAME = APP_PREFIX + VERSION
+const CACHE_NAME = APP_PREFIX + VERSION
 self.addEventListener('fetch', function (e) {
   console.log('Fetch request : ' + e.request.url)
   e.respondWith(
@@ -37,7 +37,7 @@ self.addEventListener('install', function (e) {
 self.addEventListener('activate', function (e) {
   e.waitUntil(
     caches.keys().then(function (keyList) {
-      var cacheWhitelist = keyList.filter(function (key) {
+      const cacheWhitelist = keyList.filter(function (key) {
         return key.indexOf(APP_PREFIX)
       })
       cacheWhitelist.push(CACHE_NAME)
@@ -47,6 +47,7 @@ self.addEventListener('activate', function (e) {
             console.log('Deleting cache : ' + keyList[i])
             return caches.delete(keyList[i])
           }
+          return Promise.resolve();
         })
       )
     })
